@@ -1,0 +1,24 @@
+{
+  "name": "HelloAzure",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "ref": "github.com/Arvinder777/flogo-contrib",
+  "description": "activity description",
+  "author": "Your Name <arvinder.singh@example.org>",
+  "inputs":[
+    {
+      "name": "salutation",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "string"
+    }
+  ]
+}
