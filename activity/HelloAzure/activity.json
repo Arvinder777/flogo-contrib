@@ -2,7 +2,7 @@
   "name": "HelloAzure",
   "version": "0.0.1",
   "type": "flogo:activity",
-  "ref": "github.com/Arvinder777/flogo-contrib",
+  "ref": "github.com/Arvinder777/flogo-contrib/activity/HelloAzure",
   "description": "activity description",
   "author": "Your Name <arvinder.singh@example.org>",
   "inputs":[
