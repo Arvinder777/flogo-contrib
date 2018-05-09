@@ -581,10 +581,10 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	//log.Printf("Starting")
 
 cli := QueueClient{
-  Namespace:  "mytestsbus",
-  KeyName:    "MyQPolicy",
-  KeyValue:   "G9oua11v0Ur0CgMEG+iM5rtG6tthyo0yR/o+Uy3tKak=",
-  QueueName:  "testq",
+  Namespace:  "arvinder777",
+  KeyName:    "Policy777",
+  KeyValue:   "XyCgBin4ICj80kJrw69Fl0ZtLDJQwb3gugF06ecXvew=",
+  QueueName:  "q1",
   Timeout:    60,
 }
 
