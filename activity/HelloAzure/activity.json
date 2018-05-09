@@ -7,11 +7,27 @@
   "author": "Your Name <arvinder.singh@example.org>",
   "inputs":[
     {
-      "name": "salutation",
+      "name": "Namespace",
       "type": "string"
     },
     {
-      "name": "name",
+      "name": "KeyName",
+      "type": "string"
+    },
+	    {
+      "name": "Message",
+      "type": "string"
+    },
+	    {
+      "name": "KeyValue",
+      "type": "string"
+    },
+	    {
+      "name": "QueueName",
+      "type": "string"
+    },
+	    {
+      "name": "Timeout",
       "type": "string"
     }
   ],

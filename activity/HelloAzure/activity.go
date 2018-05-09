@@ -576,22 +576,25 @@ func (p *brokerProperties) Marshal() (string, error) {
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	// Get the activity data from the context
 	name := context.GetInput("name").(string)
-	salutation := context.GetInput("salutation").(string)
+	vNamespace := context.GetInput("Namespace").(string)
+	vKeyName := context.GetInput("KeyName").(string)
+	vMessage := context.GetInput("Message").(string)
+	vKeyValue := context.GetInput("KeyValue").(string)
+	vQueueName := context.GetInput("QueueName").(string)
+	vTimeout := context.GetInput("Timeout").(string)
 	
 	//log.Printf("Starting")
 
 cli := QueueClient{
-  Namespace:  salutation,
-  KeyName:    name,
-  KeyValue:   "XyCgBin4ICj80kJrw69Fl0ZtLDJQwb3gugF06ecXvew=",
-  QueueName:  "q1",
-  Timeout:    60,
+  Namespace:  vNamespace,
+  KeyName:    vKeyName,
+  KeyValue:   vKeyValue,
+  QueueName:  vQueueName,
+  Timeout:    vTimeout,
 }
 
 
-		
-msg := NewMessage([]byte("Hello Test!"))
-
+msg := NewMessage([]byte(vMessage))
 
 msg.Properties.Set("Property1", "One")
 msg.Properties.Set("Property2", "two")
@@ -600,10 +603,10 @@ msg.Properties.Set("Property2", "two")
 cli.SendMessage(msg)	
 
 	// Use the log object to log the greeting
-	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", salutation, name)
+	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", Namespace, name)
 
 	// Set the result as part of the context
-	context.SetOutput("result", "The Flogo engine says updated1 "+salutation+" to "+name)
+	context.SetOutput("result", "The Flogo engine says updated1 "+Namespace+" to "+name)
 
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
