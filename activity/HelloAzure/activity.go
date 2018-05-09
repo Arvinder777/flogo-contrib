@@ -581,7 +581,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	vMessage := context.GetInput("Message").(string)
 	vKeyValue := context.GetInput("KeyValue").(string)
 	vQueueName := context.GetInput("QueueName").(string)
-	vTimeout := context.GetInput("Timeout").(string)
+	vTimeout := context.GetInput("Timeout").(int)
 	
 	//log.Printf("Starting")
 

@@ -28,7 +28,7 @@
     },
 	    {
       "name": "Timeout",
-      "type": "string"
+      "type": "int"
     }
   ],
   "outputs": [
