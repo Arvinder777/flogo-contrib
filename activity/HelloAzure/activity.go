@@ -600,10 +600,10 @@ msg.Properties.Set("Property2", "two")
 cli.SendMessage(msg)	
 
 	// Use the log object to log the greeting
-	log.Debugf("The Flogo engine says [%s] to [%s]", salutation, name)
+	log.Debugf("The Flogo engine says updated [%s] to [%s]", salutation, name)
 
 	// Set the result as part of the context
-	context.SetOutput("result", "The Flogo engine says "+salutation+" to "+name)
+	context.SetOutput("result", "The Flogo engine says updated "+salutation+" to "+name)
 
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
