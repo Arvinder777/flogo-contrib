@@ -581,8 +581,8 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	//log.Printf("Starting")
 
 cli := QueueClient{
-  Namespace:  "arvinder777",
-  KeyName:    "Policy777",
+  Namespace:  salutation,
+  KeyName:    name,
   KeyValue:   "XyCgBin4ICj80kJrw69Fl0ZtLDJQwb3gugF06ecXvew=",
   QueueName:  "q1",
   Timeout:    60,
@@ -600,10 +600,10 @@ msg.Properties.Set("Property2", "two")
 cli.SendMessage(msg)	
 
 	// Use the log object to log the greeting
-	log.Debugf("The Flogo engine says updated [%s] to [%s]", salutation, name)
+	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", salutation, name)
 
 	// Set the result as part of the context
-	context.SetOutput("result", "The Flogo engine says updated "+salutation+" to "+name)
+	context.SetOutput("result", "The Flogo engine says updated1 "+salutation+" to "+name)
 
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
