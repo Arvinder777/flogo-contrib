@@ -575,7 +575,7 @@ func (p *brokerProperties) Marshal() (string, error) {
 // Eval implements activity.Activity.Eval
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	// Get the activity data from the context
-	name := context.GetInput("name").(string)
+	//name := context.GetInput("name").(string)
 	vNamespace := context.GetInput("Namespace").(string)
 	vKeyName := context.GetInput("KeyName").(string)
 	vMessage := context.GetInput("Message").(string)
@@ -603,10 +603,10 @@ msg.Properties.Set("Property2", "two")
 cli.SendMessage(msg)	
 
 	// Use the log object to log the greeting
-	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", Namespace, name)
+	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", vNamespace, name)
 
 	// Set the result as part of the context
-	context.SetOutput("result", "The Flogo engine says updated1 "+Namespace+" to "+name)
+	context.SetOutput("result", "The Flogo engine says updated1 "+vNamespace+" to "+name)
 
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
