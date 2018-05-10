@@ -581,7 +581,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	//name := context.GetInput("name").(string)
 	vNamespace := context.GetInput("Namespace").(string)
 	vKeyName := context.GetInput("KeyName").(string)
-	vMessage := context.GetInput("Message").(string)
+	//vMessage := context.GetInput("Message").(string)
 	vKeyValue := context.GetInput("KeyValue").(string)
 	vQueueName := context.GetInput("QueueName").(string)
 	vTimeout := context.GetInput("Timeout").(int)
@@ -616,7 +616,7 @@ cli.DeleteMessage(msgReceive)
 	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", vNamespace, vKeyName)
 
 	// Set the result as part of the context
-	context.SetOutput("result", "The Flogo engine says updated1 "+vNamespace+" to "+vKeyName)
+	context.SetOutput("result", string(msgReceive.Body))
 
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil

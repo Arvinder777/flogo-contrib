@@ -15,10 +15,6 @@
       "type": "string"
     },
 	    {
-      "name": "Message",
-      "type": "string"
-    },
-	    {
       "name": "KeyValue",
       "type": "string"
     },
