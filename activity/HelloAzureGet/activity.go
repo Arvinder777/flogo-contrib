@@ -1,4 +1,4 @@
-package HelloAzureGet
+package HelloAzureGetGet
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
@@ -38,8 +38,6 @@ func NewActivity(metadata *activity.Metadata) activity.Activity {
 func (a *MyActivity) Metadata() *activity.Metadata {
 	return a.metadata
 }
-
-import mylog "log"
 
 const Rfc2616Time = "Mon, 02 Jan 2006 15:04:05 MST"
 
@@ -572,6 +570,7 @@ func (p *brokerProperties) Marshal() (string, error) {
 	return string(b), nil
 }
 
+
 // THIS HAS CHANGED
 // Eval implements activity.Activity.Eval
 func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
@@ -609,7 +608,6 @@ mylog.Printf(string(msgReceive.Body))
 if err!= nil {mylog.Printf(err.Error())}
 
 cli.DeleteMessage(msgReceive)	
-
 
 	// Use the log object to log the greeting
 	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", vNamespace, vKeyName)
