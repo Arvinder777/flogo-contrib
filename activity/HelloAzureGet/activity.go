@@ -1,4 +1,4 @@
-package HelloAzureGetGet
+package HelloAzureGet
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
