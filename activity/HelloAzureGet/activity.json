@@ -1,0 +1,40 @@
+{
+  "name": "HelloAzureGet",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "ref": "github.com/Arvinder777/flogo-contrib/activity/HelloAzureGet",
+  "description": "activity description",
+  "author": "Your Name <arvinder.singh@example.org>",
+  "inputs":[
+    {
+      "name": "Namespace",
+      "type": "string"
+    },
+    {
+      "name": "KeyName",
+      "type": "string"
+    },
+	    {
+      "name": "Message",
+      "type": "string"
+    },
+	    {
+      "name": "KeyValue",
+      "type": "string"
+    },
+	    {
+      "name": "QueueName",
+      "type": "string"
+    },
+	    {
+      "name": "Timeout",
+      "type": "int"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "string"
+    }
+  ]
+}
