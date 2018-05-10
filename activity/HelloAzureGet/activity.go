@@ -597,7 +597,7 @@ cli := QueueClient{
 
 //msg := NewMessage([]byte(vMessage))
 
-msg.Properties.Set("Property1", "One")
+//msg.Properties.Set("Property1", "One")
 //msg.Properties.Set("Property2", "two")
 
 // send message
