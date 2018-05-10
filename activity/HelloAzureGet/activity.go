@@ -18,7 +18,10 @@ import (
 	"strings"
 	"sync"
 	"time"
+	
 )
+
+import mylog "log"
 
 // THIS IS ADDED
 // log is the default package logger which we'll use to log
