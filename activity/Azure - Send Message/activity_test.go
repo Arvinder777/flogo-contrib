@@ -1,4 +1,4 @@
-package HelloAzure
+package Azure - Send Message
 
 import (
 	"io/ioutil"

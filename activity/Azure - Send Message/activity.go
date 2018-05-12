@@ -1,4 +1,4 @@
-package HelloAzureGet
+package Azure - Send Message
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
@@ -18,10 +18,7 @@ import (
 	"strings"
 	"sync"
 	"time"
-	
 )
-
-import mylog "log"
 
 // THIS IS ADDED
 // log is the default package logger which we'll use to log
@@ -581,7 +578,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	//name := context.GetInput("name").(string)
 	vNamespace := context.GetInput("Namespace").(string)
 	vKeyName := context.GetInput("KeyName").(string)
-	//vMessage := context.GetInput("Message").(string)
+	vMessage := context.GetInput("Message").(string)
 	vKeyValue := context.GetInput("KeyValue").(string)
 	vQueueName := context.GetInput("QueueName").(string)
 	vTimeout := context.GetInput("Timeout").(int)
@@ -597,26 +594,19 @@ cli := QueueClient{
 }
 
 
-//msg := NewMessage([]byte(vMessage))
+msg := NewMessage([]byte(vMessage))
 
-//msg.Properties.Set("Property1", "One")
-//msg.Properties.Set("Property2", "two")
+msg.Properties.Set("Property1", "One")
+msg.Properties.Set("Property2", "two")
 
 // send message
-//cli.SendMessage(msg)	
-
-msgReceive,err := cli.GetMessage()
-
-mylog.Printf(string(msgReceive.Body))
-if err!= nil {mylog.Printf(err.Error())}
-
-cli.DeleteMessage(msgReceive)	
+cli.SendMessage(msg)	
 
 	// Use the log object to log the greeting
-	log.Debugf("The Flogo engine says updated1 [%s] to [%s]", vNamespace, vKeyName)
+	log.Debugf("The Flogo engine says  [%s] to [%s]", vNamespace, vKeyName)
 
 	// Set the result as part of the context
-	context.SetOutput("result", string(msgReceive.Body))
+	context.SetOutput("result", "The Flogo engine says  "+vNamespace+" to "+vKeyName)
 
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
