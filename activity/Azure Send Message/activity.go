@@ -1,4 +1,4 @@
-package Azure - Send Message
+package Azure Send Message
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
@@ -600,12 +600,19 @@ msg.Properties.Set("Property1", "One")
 msg.Properties.Set("Property2", "two")
 
 // send message
-cli.SendMessage(msg)	
+cli.SendMessage(msg)
+
+if err!= nil {
+mylog.Printf(err.Error())
+context.SetOutput("Code", string("Error"))
+context.SetOutput("result", string(err.Error()))
+}
 
 	// Use the log object to log the greeting
 	log.Debugf("The Flogo engine says  [%s] to [%s]", vNamespace, vKeyName)
 
 	// Set the result as part of the context
+	context.SetOutput("Code", string("Success"))
 	context.SetOutput("result", "The Flogo engine says  "+vNamespace+" to "+vKeyName)
 
 	// Signal to the Flogo engine that the activity is completed

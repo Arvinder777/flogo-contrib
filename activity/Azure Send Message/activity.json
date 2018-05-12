@@ -1,8 +1,8 @@
 {
-  "name": "Azure - Send Message",
+  "name": "Azure Send Message",
   "version": "0.0.1",
   "type": "flogo:activity",
-  "ref": "github.com/Arvinder777/flogo-contrib/activity/Azure - Send Message",
+  "ref": "github.com/Arvinder777/flogo-contrib/activity/Azure Send Message",
   "description": "activity description",
   "author": "Your Name <arvinder.singh@example.org>",
   "inputs":[
@@ -32,6 +32,10 @@
     }
   ],
   "outputs": [
+      {
+      "name": "Code",
+      "type": "string"
+    },
     {
       "name": "result",
       "type": "string"
