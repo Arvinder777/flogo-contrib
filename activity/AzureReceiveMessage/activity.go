@@ -597,21 +597,13 @@ cli := QueueClient{
 }
 
 
-//msg := NewMessage([]byte(vMessage))
-
-//msg.Properties.Set("Property1", "One")
-//msg.Properties.Set("Property2", "two")
-
-// send message
-//cli.SendMessage(msg)	
-
-msgReceive,err := cli.GetMessage()
+msgReceive,err1 := cli.GetMessage()
 
 mylog.Printf(string(msgReceive.Body))
-if err!= nil {
-mylog.Printf(err.Error())
+if err1!= nil {
+mylog.Printf(err1.Error())
 context.SetOutput("Code", string("Error"))
-context.SetOutput("result", string(err.Error()))
+context.SetOutput("result", string(err1.Error()))
 } else {
 cli.DeleteMessage(msgReceive)	
 
