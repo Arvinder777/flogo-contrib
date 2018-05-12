@@ -612,10 +612,7 @@ if err!= nil {
 mylog.Printf(err.Error())
 context.SetOutput("Code", string("Error"))
 context.SetOutput("result", string(err.Error()))
-}
-
-else
-{
+} else {
 cli.DeleteMessage(msgReceive)	
 
 	// Use the log object to log the greeting
