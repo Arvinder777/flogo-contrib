@@ -1,8 +1,8 @@
 {
-  "name": "Azure - Receive Message",
+  "name": "Azure Receive Message",
   "version": "0.0.1",
   "type": "flogo:activity",
-  "ref": "github.com/Arvinder777/flogo-contrib/activity/Azure - Receive Message",
+  "ref": "github.com/Arvinder777/flogo-contrib/activity/Azure Receive Message",
   "description": "activity description",
   "author": "Your Name <arvinder.singh@example.org>",
   "inputs":[

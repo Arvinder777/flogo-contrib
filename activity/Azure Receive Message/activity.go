@@ -1,4 +1,4 @@
-package Azure - Receive Message
+package Azure Receive Message
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"

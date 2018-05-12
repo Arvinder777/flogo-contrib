@@ -1,4 +1,4 @@
-package Azure - Receive Message
+package Azure Receive Message
 
 import (
 	"io/ioutil"
