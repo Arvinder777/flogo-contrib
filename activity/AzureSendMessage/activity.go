@@ -608,14 +608,14 @@ mylog.Printf(err.Error())
 context.SetOutput("Code", string("Error"))
 context.SetOutput("result", string(err.Error()))
 }
-
+else {
 	// Use the log object to log the greeting
 	log.Debugf("The Flogo engine says  [%s] to [%s]", vNamespace, vKeyName)
 
 	// Set the result as part of the context
 	context.SetOutput("Code", string("Success"))
 	context.SetOutput("result", "The Flogo engine says  "+vNamespace+" to "+vKeyName)
-
+}
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
 }
