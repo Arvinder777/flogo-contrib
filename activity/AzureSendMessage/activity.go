@@ -607,7 +607,7 @@ if err!= nil {
 mylog.Printf(err.Error())
 context.SetOutput("Code", string("Error"))
 context.SetOutput("result", string(err.Error()))
-} else if 1=1  {
+} else {
 	// Use the log object to log the greeting
 	log.Debugf("The Flogo engine says  [%s] to [%s]", vNamespace, vKeyName)
 
@@ -616,7 +616,6 @@ context.SetOutput("result", string(err.Error()))
 	context.SetOutput("result", "The Flogo engine says  "+vNamespace+" to "+vKeyName)
 }
 
-else {}
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
 }
