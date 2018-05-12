@@ -1,8 +1,8 @@
 {
-  "name": "Azure Receive Message",
+  "name": "AzureSendMessage",
   "version": "0.0.1",
   "type": "flogo:activity",
-  "ref": "github.com/Arvinder777/flogo-contrib/activity/Azure Receive Message",
+  "ref": "github.com/Arvinder777/flogo-contrib/activity/AzureSendMessage",
   "description": "activity description",
   "author": "Your Name <arvinder.singh@example.org>",
   "inputs":[
@@ -12,6 +12,10 @@
     },
     {
       "name": "KeyName",
+      "type": "string"
+    },
+	    {
+      "name": "Message",
       "type": "string"
     },
 	    {
@@ -28,11 +32,11 @@
     }
   ],
   "outputs": [
-    {
+      {
       "name": "Code",
       "type": "string"
     },
-	 {
+    {
       "name": "result",
       "type": "string"
     }

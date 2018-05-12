@@ -1,4 +1,4 @@
-package Azure Send Message
+package AzureSendMessage
 
 import (
 	"io/ioutil"
