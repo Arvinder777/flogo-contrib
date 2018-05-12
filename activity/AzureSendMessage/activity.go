@@ -601,7 +601,7 @@ msg.Properties.Set("Property1", "One")
 msg.Properties.Set("Property2", "two")
 
 // send message
-cli.SendMessage(msg)
+err := cli.SendMessage(msg)
 
 if err!= nil {
 mylog.Printf(err.Error())

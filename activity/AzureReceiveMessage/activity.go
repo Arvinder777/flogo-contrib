@@ -612,7 +612,7 @@ if err!= nil {
 mylog.Printf(err.Error())
 context.SetOutput("Code", string("Error"))
 context.SetOutput("result", string(err.Error()))
-} else if 1=1 {
+} else {
 cli.DeleteMessage(msgReceive)	
 
 	// Use the log object to log the greeting
@@ -624,5 +624,4 @@ cli.DeleteMessage(msgReceive)
 }
 	// Signal to the Flogo engine that the activity is completed
 	return true, nil
- else {}
 }
