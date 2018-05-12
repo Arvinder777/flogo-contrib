@@ -601,12 +601,12 @@ msg.Properties.Set("Property1", "One")
 msg.Properties.Set("Property2", "two")
 
 // send message
-err := cli.SendMessage(msg)
+err1 := cli.SendMessage(msg)
 
-if err!= nil {
-mylog.Printf(err.Error())
+if err1!= nil {
+mylog.Printf(err1.Error())
 context.SetOutput("Code", string("Error"))
-context.SetOutput("result", string(err.Error()))
+context.SetOutput("result", string(err1.Error()))
 } else {
 	// Use the log object to log the greeting
 	log.Debugf("The Flogo engine says  [%s] to [%s]", vNamespace, vKeyName)
